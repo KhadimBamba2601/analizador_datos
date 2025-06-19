@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import ConjuntoDatos, ResultadoAnalisis
 
-# Register your models here.
+admin.site.register(ConjuntoDatos)
+admin.site.register(ResultadoAnalisis)

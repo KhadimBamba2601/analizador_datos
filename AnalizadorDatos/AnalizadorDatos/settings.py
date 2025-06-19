@@ -105,3 +105,18 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Seguridad
+SECURE_SSL_REDIRECT = False  # Cambiar a True en producción
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# Directorio para archivos subidos
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
