@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Subir Conjunto de Datos{% endblock %}
+{% block content %}
+    <h2>Subir Conjunto de Datos</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Subir</button>
+    </form>
+    <a href="{% url 'inicio' %}" class="btn btn-secondary mt-3">Volver</a>
+{% endblock %}
