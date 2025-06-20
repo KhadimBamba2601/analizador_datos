@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Subir Conjunto de Datos{% endblock %}
 {% block content %}
+   scoped: Subir Conjunto de Datos
     <h2>Subir Conjunto de Datos</h2>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
